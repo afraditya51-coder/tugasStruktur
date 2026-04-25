@@ -12,10 +12,10 @@ void push_tail(Node **head, int nilai){
 	if (*head == NULL){
 		*head = node;
 		return;
-	}
 	Node *bantu = *head;
 	while (bantu->next != NULL) bantu = bantu->next;
 	bantu->next = node;
+	}
 }
 
 //void push_head(Node **head, int nilaiBaru){
@@ -47,12 +47,12 @@ int main(){
 		push_tail(&head, nilai);
 	}
 	cout<<endl;
-	cout<<"Masukan data yang ditambahkan di awal : ";
+	cout<<"Masukan data yang ditambahkan di akhir : ";
 	cin>>tambahData;
 	
 	push_tail(&head, tambahData);
 	
-	cout<<"\nData setelah ditambah diawal"<<endl;
+	cout<<"\nData setelah ditambah diakhir"<<endl;
 	show_list(head);
 	
 	return 0;
