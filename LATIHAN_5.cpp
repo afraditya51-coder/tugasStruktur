@@ -12,10 +12,12 @@ void push_tail(Node **head, int nilai){
 	if (*head == NULL){
 		*head = node;
 		return;
-	Node *bantu = *head;
-	while (bantu->next != NULL) bantu = bantu->next;
-	bantu->next = node;
 	}
+	Node *bantu = *head;
+	while (bantu->next != NULL) {
+	bantu = bantu->next;
+	}
+	bantu->next = node;
 }
 
 //void push_head(Node **head, int nilaiBaru){
